@@ -19,4 +19,12 @@ public class MountainBike implements BikeBuilder {
     public String buildTire() {
         return "Knobby Tires";
     }
+
+    @Override
+    public Bike getResult(){
+        Bike bike = new Bike();
+        bike.setFrame(buildFrame());
+        bike.setTire(buildTire());
+        return bike;
+    }
 }

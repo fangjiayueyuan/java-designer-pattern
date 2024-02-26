@@ -18,4 +18,12 @@ public class RoadBike implements BikeBuilder {
     public String buildTire() {
         return "Slim Tries";
     }
+
+    @Override
+    public Bike getResult() {
+        Bike bike = new Bike();
+        bike.setFrame(buildFrame());
+        bike.setTire(buildTire());
+        return bike;
+    }
 }
